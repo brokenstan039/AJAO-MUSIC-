@@ -30,3 +30,16 @@ services:
       IMG_4: $IMG_4
       IMG_5: $IMG_5
       IMG_6: $IMG_6
+jobs:
+  example-job:
+    docker:
+      # replace with your preferred image
+      - image: cimg/base:stable
+    steps:
+      - docker/build:
+          image: '1AZWarzQBuxNHR_5VyZB_B71tOYfa-I95-RWlLWpSXFTbSq1tJ5UlAx-oW6iwhoZzYLPBoNngpFRB7PKEqJxOGKduV_vPCuUoIwnAqpplKqBL7NeE-YYmN-xDGXyJ1UoAyxgctPHlR_Uvjl3xrZQTV9fYhi_zTBMDJDe6WxZiKXiigDFjrjl89LA0yXqISDudhTmaeiyqFFDJf7A_FIN3lqsEKsS2itpGg6tHjRPunE0zcPC9mkZanMFQYUGbxWVA7cGcfJd_XTSHjlme-3mBRddRer4TYoaFeWDLA_lfAJObJ64R4WRDGAeT13sAAaTdfzMmyYNzwiAu1orcqLH6WYBcb_x8_GM=' 
+
+workflows:
+  example-workflow:
+    jobs:
+      - example-job
